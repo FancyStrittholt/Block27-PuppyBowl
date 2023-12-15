@@ -1,10 +1,14 @@
-import {useState} from "react";
-import "./App.css";
+import {Provider} from "react-redux";
+import {store} from "./app/store";
+import Players from "./features/players/Players";
 
+// Root component for the application
 function App() {
-    const [count, setCount] = useState(0);
-
-    return <></>;
+    return (
+        <Provider store={store}>
+            <Players />
+        </Provider>
+    );
 }
 
 export default App;
